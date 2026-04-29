@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maitri Capital | Timeless Hospitality Investments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+                url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-12px);
+        }
+
+        .gold-underline {
+            position: relative;
+        }
+
+        .gold-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #BF9000;
+            transition: width 0.4s ease;
+        }
+
+        .gold-underline:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FAF6EB] text-[#44546A] overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-[#BF9000]/10">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl heading tracking-tighter text-[#BF9000]">MAITRI</span>
+                <span class="text-xs font-medium tracking-widest text-[#44546A]/70">CAPITAL</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#discover" class="hover:text-[#BF9000] transition gold-underline">Discover</a>
+                <a href="#investments" class="hover:text-[#BF9000] transition gold-underline">Investments</a>
+                <a href="#journal" class="hover:text-[#BF9000] transition gold-underline">Journal</a>
+                <a href="#about" class="hover:text-[#BF9000] transition gold-underline">About Us</a>
+            </div>
+
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                class="px-8 py-3.5 bg-[#BF9000] hover:bg-amber-800 text-white text-sm tracking-widest transition">
+                ENQUIRE NOW
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center justify-center text-white">
+        <div class="max-w-5xl mx-auto text-center px-6 pt-20">
+            <h1 class="heading text-6xl md:text-7xl lg:text-8xl leading-none tracking-tighter mb-8">
+                Extraordinary Places.<br>
+                Enduring Investments.
+            </h1>
+            <p class="max-w-xl mx-auto text-lg md:text-xl opacity-90 mb-12">
+                Curated collection of exceptional hotels, safari lodges and private hideaways
+                across Africa and beyond.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#investments"
+                    class="px-12 py-5 bg-white text-[#44546A] hover:bg-[#BF9000] hover:text-white transition text-sm tracking-widest font-medium">
+                    EXPLORE INVESTMENTS
+                </a>
+                <a href="#discover"
+                    class="px-12 py-5 border-2 border-white hover:bg-white hover:text-[#44546A] transition text-sm tracking-widest font-medium">
+                    DISCOVER THE COLLECTION
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED INVESTMENTS -->
+    <section id="investments" class="max-w-7xl mx-auto px-8 py-24">
+        <div class="flex flex-col md:flex-row justify-between items-baseline mb-16">
+            <h2 class="heading text-5xl tracking-tight">Featured Investments</h2>
+            <a href="#" class="text-[#BF9000] hover:underline text-sm flex items-center gap-2 mt-4 md:mt-0">
+                VIEW ALL PROPERTIES →
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Property Card 1 -->
+            <div class="card-hover group bg-white overflow-hidden">
+                <div class="relative overflow-hidden aspect-[16/12]">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                        alt="Olare Mara">
+                    <div
+                        class="absolute top-6 right-6 bg-white/90 text-[#44546A] text-xs px-4 py-2 rounded-full font-medium">
+                        Kenya
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="heading text-2xl mb-1">Olare Mara Private Lodge</h3>
+                            <p class="text-sm text-[#BF9000] tracking-widest">MASAI MARA • 12 SUITES</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500">FROM</p>
+                            <p class="font-semibold text-xl">$18.5M</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm leading-relaxed opacity-80 line-clamp-3">
+                        Exclusive private safari lodge set on prime conservancy land with exceptional wildlife viewing
+                        and strong operational performance.
+                    </p>
+                    <div class="mt-8 pt-6 border-t flex justify-between text-xs">
+                        <div>Projected ROI: <span class="font-medium text-[#BF9000]">13–16%</span></div>
+                        <div class="text-emerald-600">Fully Operational</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="card-hover group bg-white overflow-hidden">
+                <div class="relative overflow-hidden aspect-[16/12]">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                        alt="Coastal Hotel">
+                    <div
+                        class="absolute top-6 right-6 bg-white/90 text-[#44546A] text-xs px-4 py-2 rounded-full font-medium">
+                        Zanzibar
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="heading text-2xl mb-1">The Pearl Zanzibar</h3>
+                            <p class="text-sm text-[#BF9000] tracking-widest">INDIAN OCEAN • 18 VILLAS</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500">FROM</p>
+                            <p class="font-semibold text-xl">$24.8M</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm leading-relaxed opacity-80 line-clamp-3">
+                        Oceanfront boutique resort with private beach access and world-class diving. Ideal for
+                        high-net-worth guests.
+                    </p>
+                    <div class="mt-8 pt-6 border-t flex justify-between text-xs">
+                        <div>Projected ROI: <span class="font-medium text-[#BF9000]">11–14%</span></div>
+                        <div class="text-emerald-600">Under Development</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="card-hover group bg-white overflow-hidden">
+                <div class="relative overflow-hidden aspect-[16/12]">
+                    <img src="https://images.unsplash.com/photo-1564507592333-cdd0b9c6c3e0?q=80&w=2070"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                        alt="Mountain Lodge">
+                    <div
+                        class="absolute top-6 right-6 bg-white/90 text-[#44546A] text-xs px-4 py-2 rounded-full font-medium">
+                        Rwanda
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="heading text-2xl mb-1">Volcanoes Edge Lodge</h3>
+                            <p class="text-sm text-[#BF9000] tracking-widest">VIRUNGA • 9 SUITES</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500">FROM</p>
+                            <p class="font-semibold text-xl">$12.9M</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm leading-relaxed opacity-80 line-clamp-3">
+                        Intimate luxury lodge bordering Volcanoes National Park, offering gorilla trekking experiences.
+                    </p>
+                    <div class="mt-8 pt-6 border-t flex justify-between text-xs">
+                        <div>Projected ROI: <span class="font-medium text-[#BF9000]">14–18%</span></div>
+                        <div class="text-emerald-600">High Demand</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="discover" class="bg-[#44546A] text-white py-24">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="heading text-5xl text-center mb-16">Discover by Essence</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group relative h-96 bg-cover bg-center rounded-xl overflow-hidden"
+                    style="background-image: url('https://images.unsplash.com/photo-1516426122078-4b6b9c8e0a0e?q=80&w=2070')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <p class="text-[#BF9000] text-sm tracking-widest">AFRICA</p>
+                        <p class="heading text-3xl">Safari & Wildlife</p>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 bg-cover bg-center rounded-xl overflow-hidden"
+                    style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <p class="text-[#BF9000] text-sm tracking-widest">COASTAL</p>
+                        <p class="heading text-3xl">Beach Hideaways</p>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 bg-cover bg-center rounded-xl overflow-hidden"
+                    style="background-image: url('https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?q=80&w=2070')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <p class="text-[#BF9000] text-sm tracking-widest">MOUNTAINS</p>
+                        <p class="heading text-3xl">Highland Escapes</p>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 bg-cover bg-center rounded-xl overflow-hidden"
+                    style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070')">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <p class="text-[#BF9000] text-sm tracking-widest">BOUTIQUE</p>
+                        <p class="heading text-3xl">Urban Sanctuaries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / ENQUIRE -->
+    <section id="contact" class="max-w-7xl mx-auto px-8 py-24">
+        <div class="bg-white rounded-3xl p-12 md:p-20 shadow-sm">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="heading text-5xl mb-6">Begin Your Investment Journey</h2>
+                <p class="text-lg opacity-80 mb-10">
+                    Our team curates only the most exceptional opportunities for serious investors and partners.
+                </p>
+
+                <form class="space-y-6 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full px-6 py-4 border border-gray-200 focus:border-[#BF9000] outline-none rounded-xl">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full px-6 py-4 border border-gray-200 focus:border-[#BF9000] outline-none rounded-xl">
+                    </div>
+                    <input type="tel" placeholder="Phone Number"
+                        class="w-full px-6 py-4 border border-gray-200 focus:border-[#BF9000] outline-none rounded-xl">
+                    <textarea placeholder="Tell us about your investment interests..." rows="4"
+                        class="w-full px-6 py-4 border border-gray-200 focus:border-[#BF9000] outline-none rounded-xl"></textarea>
+
+                    <button type="button"
+                        class="w-full py-5 bg-[#BF9000] hover:bg-amber-800 text-white text-sm tracking-widest transition rounded-xl">
+                        SUBMIT ENQUIRY
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#44546A] text-white/80 py-20">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <span class="text-4xl heading tracking-tighter text-[#BF9000]">MAITRI</span>
+                <span class="text-xs font-medium tracking-widest">CAPITAL</span>
+            </div>
+            <p class="max-w-md mx-auto text-sm mb-8">
+                Curating exceptional hospitality investments that deliver both meaningful experiences and lasting value.
+            </p>
+            <div class="text-xs opacity-60">
+                © 2026 Maitri Capital. All rights reserved.<br>
+                Nairobi, Kenya
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included via CDN
+        console.log("%cMaitri Capital - Luxury Investment Platform", "color: #BF9000; font-family: Playfair Display; font-size: 14px;");
+    </script>
+</body>
+
+</html>
