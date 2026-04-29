@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/maitri_capital_listing/static/css/main.e6c13ad2.css",
+    "main.js": "/maitri_capital_listing/static/js/main.7479007a.js",
+    "static/media/project_bahati_banner.avif": "/maitri_capital_listing/static/media/project_bahati_banner.bda32dcc157ac87f6c46.avif",
+    "static/media/contact_section_banner.avif": "/maitri_capital_listing/static/media/contact_section_banner.b85fdde05c5c2957e990.avif",
+    "static/media/project_manjaro_banner.avif": "/maitri_capital_listing/static/media/project_manjaro_banner.e4b505f545175df166e1.avif",
+    "static/media/project_johari_banner.avif": "/maitri_capital_listing/static/media/project_johari_banner.e1f05ea7d944002fc756.avif",
+    "static/media/project_atlas_banner.avif": "/maitri_capital_listing/static/media/project_atlas_banner.17e271ed0ae8becf7bee.avif",
+    "static/media/project_maasai_banner.avif": "/maitri_capital_listing/static/media/project_maasai_banner.50e273f68fac424e98b7.avif",
+    "static/media/project_nexus_banner.avif": "/maitri_capital_listing/static/media/project_nexus_banner.05b6155f03ca69d9d0ba.avif",
+    "static/media/project_ilora_banner.avif": "/maitri_capital_listing/static/media/project_ilora_banner.d6fc76dc6b40c7edad4d.avif",
+    "static/media/banner_image.avif": "/maitri_capital_listing/static/media/banner_image.3ae91c098fef3965c129.avif",
+    "index.html": "/maitri_capital_listing/index.html",
+    "main.e6c13ad2.css.map": "/maitri_capital_listing/static/css/main.e6c13ad2.css.map",
+    "main.7479007a.js.map": "/maitri_capital_listing/static/js/main.7479007a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7479007a.js"
+  ]
+}
