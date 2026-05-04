@@ -29,7 +29,21 @@ const ListingDetail = ({ listing, onBack }) => {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(26,31,38,0.88) 0%, rgba(26,31,38,0.2) 60%, transparent 100%)" }} />
         <button
           onClick={onBack}
-          style={{ position: "absolute", top: isMobile ? 80 : 100, left: isMobile ? 20 : 60, background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white", padding: isMobile ? "8px 16px" : "10px 22px", fontSize: 10, letterSpacing: "0.25em", textTransform: "uppercase", cursor: "pointer", backdropFilter: "blur(8px)", transition: "background 0.3s" }}
+            style={{ 
+              position: "absolute", 
+              top: isMobile ? 80 : 100, 
+              left: isMobile ? 20 : 60, 
+              background: "rgba(255,255,255,0.1)", 
+              border: "1px solid rgba(255,255,255,0.2)", 
+              color: "white", 
+              padding: isMobile ? "8px 16px" : "10px 22px", 
+              fontSize: 10, 
+              letterSpacing: "0.25em", 
+              textTransform: "uppercase", 
+              cursor: "pointer", 
+              backdropFilter: "blur(8px)", 
+              transition: "background 0.3s" 
+          }}
           onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.2)")}
           onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
         >

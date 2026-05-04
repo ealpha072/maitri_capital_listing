@@ -9,7 +9,7 @@ const StatsBar = ({ listings }) => {
   );
   const stats = [
     { num: `$${totalInvest.toFixed(0)}M+`, label: "Total Investments" },
-    { num: listings.length, label: "Properties in Africa" },
+    { num: listings.length, label: "Opportunities in Africa" },
     { num: "5+", label: "Property Types" },
     { num: "2", label: "Countries" },
   ];

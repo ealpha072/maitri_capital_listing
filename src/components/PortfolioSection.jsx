@@ -120,7 +120,7 @@ const PortfolioSection = ({ listings, onSelect }) => {
         <div>
           <Eyebrow>Current Portfolio</Eyebrow>
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px,5vw,62px)", fontWeight: 300, color: T.ink, letterSpacing: "-0.01em" }}>
-            Active <em style={{ fontStyle: "italic", color: T.slate }}>Investments</em>
+            Active <em style={{ fontStyle: "italic", color: T.slate }}>Opportunities</em>
           </h2>
         </div>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>

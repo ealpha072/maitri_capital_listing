@@ -45,7 +45,7 @@ const DEFAULT_LISTINGS = [
         description: "A heritage luxury safari operator with a multi-generational legacy in East Africa, the business delivers high-end, conservation-led safari experiences within a privately managed conservancy in the Maasai Mara ecosystem. The company operates a low-density, high-yield model centered on a flagship camp and private residences, offering immersive, fully guided wildlife experiences supported by strong in-house guiding expertise and personalized service. Revenue is driven by all-inclusive nightly rates targeting affluent international travelers, with differentiation anchored in its legacy brand, deep conservation integration, and community engagement, positioning the platform within the growing global demand for sustainable, purpose-driven luxury tourism.", 
         highlights: ["Phenomenal and exclusive wilderness destinations", "Market Leader in Luxury Tourism", "Dedication to Sustainability", "Highly profitable and cashflow positive"], 
         image: project_manjaro_banner, 
-        galleryImages: ["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80"] 
+        galleryImages: [""] 
     },
     { 
         id: "3", 
@@ -121,7 +121,7 @@ const DEFAULT_LISTINGS = [
         description: "a thriving boutique beachfront hotel, renowned for its design, privacy, and sustainability. With fewer than 10 rooms, positioned within a protected marine area along Kenya's pristine coastline, this coastal gem offers rare intimacy and scale.The property combines strong present-day performance with clear forward momentum—with professionally developed expansion plans included in the sale, offering a viable pathway to scale in one of Africa's most promising luxury tourism corridors.", 
         highlights: ["Prime beachfront location", "Award-Winning Eco-Luxury", "Intimate, Expandable Concept", "Diversified Revenue Streams"], 
         image: project_johari_banner, 
-        galleryImages: ["https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80","https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80"] 
+        galleryImages: [] 
     },
     { 
         id: "7", 

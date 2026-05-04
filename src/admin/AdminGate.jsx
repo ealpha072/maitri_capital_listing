@@ -14,7 +14,7 @@ const AdminGate = ({ listings, onSave }) => {
     <AdminDashboard
       listings={listings}
       onSave={onSave}
-      onLogout={() => { setAuth(false); navigate("/"); }}
+      onLogout={() => { setAuth(false); navigate("/maitri_capital_listing"); }}
     />
   );
 };
