@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maitri_capital_listing/static/css/main.e6c13ad2.css",
-    "main.js": "/maitri_capital_listing/static/js/main.7479007a.js",
+    "main.js": "/maitri_capital_listing/static/js/main.c4ba37ad.js",
     "static/media/project_bahati_banner.avif": "/maitri_capital_listing/static/media/project_bahati_banner.bda32dcc157ac87f6c46.avif",
     "static/media/contact_section_banner.avif": "/maitri_capital_listing/static/media/contact_section_banner.b85fdde05c5c2957e990.avif",
     "static/media/project_manjaro_banner.avif": "/maitri_capital_listing/static/media/project_manjaro_banner.e4b505f545175df166e1.avif",
@@ -13,10 +13,10 @@
     "static/media/banner_image.avif": "/maitri_capital_listing/static/media/banner_image.3ae91c098fef3965c129.avif",
     "index.html": "/maitri_capital_listing/index.html",
     "main.e6c13ad2.css.map": "/maitri_capital_listing/static/css/main.e6c13ad2.css.map",
-    "main.7479007a.js.map": "/maitri_capital_listing/static/js/main.7479007a.js.map"
+    "main.c4ba37ad.js.map": "/maitri_capital_listing/static/js/main.c4ba37ad.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.7479007a.js"
+    "static/js/main.c4ba37ad.js"
   ]
 }
