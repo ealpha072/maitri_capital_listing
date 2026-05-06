@@ -19,8 +19,14 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
     <>
       <nav
         style={{
-          position: "fixed", top: 0, left: 0, right: 0, zIndex: 200,
-          display: "flex", alignItems: "center", justifyContent: "space-between",
+          position: "fixed", 
+          top: 0, 
+          left: 0, 
+          right: 0, 
+          zIndex: 200,
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "space-between",
           padding: scrolled ? `16px ${isTablet ? "24px" : "56px"}` : `26px ${isTablet ? "24px" : "56px"}`,
           background: scrolled || menuOpen ? "rgba(250,248,244,0.97)" : "transparent",
           backdropFilter: scrolled || menuOpen ? "blur(12px)" : "none",
@@ -30,7 +36,12 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
       >
         <button
           onClick={() => { onHome(); setMenuOpen(false); }}
-          style={{ background: "none", border: "none", cursor: "pointer", textAlign: "left" }}
+          style={{ 
+            background: "none", 
+            border: "none", 
+            cursor: "pointer", 
+            textAlign: "left" 
+          }}
         >
           <div 
             style={{ 
@@ -43,14 +54,28 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
           >
             Maitri Capital
           </div>
-          <div style={{ fontSize: 8, letterSpacing: "0.35em", textTransform: "uppercase", color: T.gold, marginTop: 2 }}>
+          <div 
+            style={{ 
+              fontSize: 8, 
+              letterSpacing: "0.35em", 
+              textTransform: "uppercase", 
+              color: T.gold, 
+              marginTop: 2 
+            }}
+          >
             Opportunities Portfolio
           </div>
         </button>
 
         {/* Desktop links */}
         {!isTablet && (
-          <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
+          <div 
+            style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: 36 
+            }}
+          >
             {["Portfolio", "Philosophy", "Process", "Contact"].map((l) => (
               <a
                 key={l}
@@ -105,9 +130,17 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
               color: scrolled || menuOpen ? T.slateDark : "white" 
             }}
           >
-            <span className="hamburger-line" style={{ transform: menuOpen ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
-            <span className="hamburger-line" style={{ opacity: menuOpen ? 0 : 1 }} />
-            <span className="hamburger-line" style={{ transform: menuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none" }} />
+            <span 
+              className="hamburger-line" 
+              style={{ transform: menuOpen ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
+            <span 
+              className="hamburger-line" 
+              style={{ opacity: menuOpen ? 0 : 1 }} 
+            />
+            <span 
+              className="hamburger-line" 
+              style={{ transform: menuOpen ? "rotate(-45deg) translate(4px, -4px)" : "none" }} 
+            />
           </button>
         )}
       </nav>
@@ -116,7 +149,12 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
       {isTablet && menuOpen && (
         <div 
           style={{ 
-            position: "fixed", top: 0, left: 0, right: 0, bottom: 0, zIndex: 199, 
+            position: "fixed", 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            zIndex: 199, 
             background: "rgba(250,248,244,0.98)", 
             backdropFilter: "blur(16px)", 
             display: "flex", 
@@ -144,7 +182,14 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
               {l}
             </a>
           ))}
-          <div style={{ width: 40, height: 1, background: T.border, margin: "12px 0" }} />
+          <div 
+            style={{ 
+              width: 40, 
+              height: 1, 
+              background: T.border, 
+              margin: "12px 0" 
+            }} 
+          />
           <button
             onClick={() => { onAdmin(); setMenuOpen(false); }}
             style={{ 

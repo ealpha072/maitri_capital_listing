@@ -41,24 +41,62 @@ const AdminDashboard = ({ listings, onSave, onLogout }) => {
     <div style={{ minHeight: "100vh", background: T.cream }}>
  
       {/* Admin Nav */}
-      <div style={{ background: T.slateDark, padding: `0 ${isMobile ? "20px" : "56px"}`, display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: `2px solid ${T.gold}` }}>
+      <div 
+        style={{ 
+          background: T.slateDark, 
+          padding: `0 ${isMobile ? "20px" : "56px"}`, 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "space-between", 
+          borderBottom: `2px solid ${T.gold}` 
+        }}
+      >
         <div style={{ padding: "18px 0" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: isMobile ? 18 : 22, color: "white", letterSpacing: "0.1em" }}>
+          <div 
+            style={{ 
+              fontFamily: "'Cormorant Garamond', serif", 
+              fontSize: isMobile ? 18 : 22, 
+              color: "white", 
+              letterSpacing: "0.1em" 
+            }}
+          >
             Maitri Capital
           </div>
-          <div style={{ fontSize: 8, letterSpacing: "0.35em", textTransform: "uppercase", color: T.gold }}>
+          <div 
+            style={{ 
+              fontSize: 8, 
+              letterSpacing: "0.35em", 
+              textTransform: "uppercase", 
+              color: T.gold 
+            }}
+          >
             Admin Dashboard
           </div>
         </div>
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
           {!isMobile && (
-            <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.15em" }}>
+            <div 
+              style={{ 
+                fontSize: 10, 
+                color: "rgba(255,255,255,0.35)", 
+                letterSpacing: "0.15em" 
+              }}
+            >
               {listings.length} Listings
             </div>
           )}
           <button
             onClick={onLogout}
-            style={{ background: "none", border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.5)", padding: "7px 16px", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", cursor: "pointer" }}
+            style={{ 
+              background: "none", 
+              border: "1px solid rgba(255,255,255,0.2)", 
+              color: "rgba(255,255,255,0.5)", 
+              padding: "7px 16px", 
+              fontSize: 10, 
+              letterSpacing: "0.2em", 
+              textTransform: "uppercase", 
+              cursor: "pointer" 
+            }}
           >
             Sign Out
           </button>
@@ -68,9 +106,25 @@ const AdminDashboard = ({ listings, onSave, onLogout }) => {
       <div style={{ padding: isMobile ? "32px 20px" : isTablet ? "40px 32px" : "52px 56px" }}>
  
         {/* Header */}
-        <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", alignItems: isMobile ? "flex-start" : "flex-end", marginBottom: 36, gap: 16 }}>
+        <div 
+          style={{ 
+            display: "flex", 
+            flexDirection: isMobile ? "column" : "row", 
+            justifyContent: "space-between", 
+            alignItems: isMobile ? "flex-start" : "flex-end", 
+            marginBottom: 36, 
+            gap: 16 
+          }}
+        >
           <div>
-            <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: isMobile ? 32 : 42, fontWeight: 300, color: T.ink }}>
+            <h1 
+              style={{ 
+                fontFamily: "'Cormorant Garamond', serif", 
+                fontSize: isMobile ? 32 : 42, 
+                fontWeight: 300, 
+                color: T.ink 
+              }}
+            >
               Investment <em style={{ fontStyle: "italic", color: T.slate }}>Listings</em>
             </h1>
             <p style={{ fontSize: 13, color: T.slateLight, marginTop: 5 }}>
@@ -80,7 +134,17 @@ const AdminDashboard = ({ listings, onSave, onLogout }) => {
           {!editing && (
             <button
               onClick={() => setEditing("new")}
-              style={{ background: T.gold, color: "white", border: "none", padding: "13px 28px", fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", cursor: "pointer", whiteSpace: "nowrap" }}
+              style={{ 
+                background: T.gold, 
+                color: "white", 
+                border: "none", 
+                padding: "13px 28px", 
+                fontSize: 10, 
+                letterSpacing: "0.28em", 
+                textTransform: "uppercase", 
+                cursor: "pointer", 
+                whiteSpace: "nowrap" 
+              }}
             >
               + Add New Listing
             </button>
@@ -99,48 +163,149 @@ const AdminDashboard = ({ listings, onSave, onLogout }) => {
         )}
  
         {/* Table */}
-        <div className="admin-table-wrap" style={{ border: `1px solid ${T.border}` }}>
-          <div style={{ display: "grid", gridTemplateColumns: tableColumns, background: T.slateDark, padding: "12px 16px", minWidth: isMobile ? 400 : "auto" }}>
+        <div 
+          className="admin-table-wrap" 
+          style={{ border: `1px solid ${T.border}` }}
+        >
+          <div 
+            style={{ 
+              display: "grid", 
+              gridTemplateColumns: tableColumns, 
+              background: T.slateDark, 
+              padding: "12px 16px", 
+              minWidth: isMobile ? 400 : "auto" 
+            }}
+          >
             {tableHeaders.map((h) => (
-              <div key={h} style={{ fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)" }}>
+              <div 
+                key={h} 
+                style={{ 
+                  fontSize: 8, 
+                  letterSpacing: "0.3em", 
+                  textTransform: "uppercase", 
+                  color: "rgba(255,255,255,0.4)" 
+                }}
+              >
                 {h}
               </div>
             ))}
           </div>
  
           {listings.length === 0 && (
-            <div style={{ padding: "48px 16px", textAlign: "center", color: T.slateLight, fontStyle: "italic" }}>
+            <div 
+              style={{ 
+                padding: "48px 16px", 
+                textAlign: "center", 
+                color: T.slateLight, 
+                fontStyle: "italic" 
+              }}
+            >
               No listings yet. Add your first property above.
             </div>
           )}
  
           {listings.map((l, i) => (
-            <div key={l.id}>
+            <div 
+              key={l.id}>
               {delConfirm === l.id && (
-                <div style={{ background: "#fff5f5", borderBottom: "1px solid #fcc", padding: "12px 16px", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+                <div 
+                  style={{ 
+                    background: "#fff5f5", 
+                    borderBottom: "1px solid #fcc", 
+                    padding: "12px 16px", 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: 12, 
+                    flexWrap: "wrap" 
+                  }}
+                >
                   <span style={{ fontSize: 13, color: T.ink }}>
                     Delete <strong>{l.title}</strong>? This cannot be undone.
                   </span>
-                  <button onClick={() => handleDelete(l.id)} style={{ background: "#c00", color: "white", border: "none", padding: "6px 16px", fontSize: 11, cursor: "pointer" }}>
+                  <button 
+                    onClick={() => handleDelete(l.id)} 
+                    style={{ 
+                      background: "#c00", 
+                      color: "white", 
+                      border: "none", 
+                      padding: "6px 16px", 
+                      fontSize: 11, 
+                      cursor: "pointer" 
+                    }}
+                  >
                     Delete
                   </button>
-                  <button onClick={() => setDelConfirm(null)} style={{ background: "none", border: `1px solid ${T.border}`, padding: "6px 14px", fontSize: 11, cursor: "pointer" }}>
+                  <button 
+                    onClick={() => setDelConfirm(null)} 
+                    style={{ 
+                      background: "none", 
+                      border: `1px solid ${T.border}`, 
+                      padding: "6px 14px", 
+                      fontSize: 11, 
+                      cursor: "pointer" 
+                    }}
+                  >
                     Cancel
                   </button>
                 </div>
               )}
  
               <div
-                style={{ display: "grid", gridTemplateColumns: tableColumns, padding: "14px 16px", alignItems: "center", borderBottom: i < listings.length - 1 ? `1px solid ${T.border}` : "none", background: i % 2 === 0 ? "white" : T.cream, minWidth: isMobile ? 400 : "auto", transition: "background 0.2s" }}
+                style={{ 
+                  display: "grid", 
+                  gridTemplateColumns: tableColumns, 
+                  padding: "14px 16px", 
+                  alignItems: "center", 
+                  borderBottom: i < listings.length - 1 ? `1px solid ${T.border}` : "none", 
+                  background: i % 2 === 0 ? "white" : T.cream, 
+                  minWidth: isMobile ? 400 : "auto", 
+                  transition: "background 0.2s" 
+                }}
                 onMouseEnter={(e) => (e.currentTarget.style.background = T.warmWhite)}
                 onMouseLeave={(e) => (e.currentTarget.style.background = i % 2 === 0 ? "white" : T.cream)}
               >
                 {/* Property */}
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <img src={l.image} alt="" style={{ width: 44, height: 34, objectFit: "cover", flexShrink: 0 }} onError={(e) => (e.target.style.display = "none")} />
+                <div 
+                  style={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: 12 
+                  }}
+                >
+                  <img 
+                    src={l.image} 
+                    alt="" 
+                    style={{ 
+                      width: 44, 
+                      height: 34, 
+                      objectFit: "cover", 
+                      flexShrink: 0 
+                    }} 
+                    onError={(e) => (e.target.style.display = "none")} 
+                  />
                   <div>
-                    <div style={{ fontSize: 12, color: T.ink, fontWeight: 400, lineHeight: 1.3 }}>{l.title}</div>
-                    {l.featured && <div style={{ fontSize: 8, letterSpacing: "0.25em", textTransform: "uppercase", color: T.gold, marginTop: 2 }}>Featured</div>}
+                    <div 
+                      style={{ 
+                        fontSize: 12, 
+                        color: T.ink, 
+                        fontWeight: 400, 
+                        lineHeight: 1.3 
+                      }}
+                    >
+                      {l.title}
+                    </div>
+                    {l.featured && 
+                      <div 
+                        style={{ 
+                          fontSize: 8, 
+                          letterSpacing: "0.25em", 
+                          textTransform: "uppercase", 
+                          color: T.gold, 
+                          marginTop: 2 
+                        }}
+                      >
+                        Featured
+                      </div>}
                     {isMobile && <div style={{ fontSize: 11, color: T.slateLight, marginTop: 2 }}>{l.location}</div>}
                   </div>
                 </div>

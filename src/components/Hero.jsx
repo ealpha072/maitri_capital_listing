@@ -73,7 +73,14 @@ const Hero = ({ onExplore }) => {
           A curated portfolio of world-class hospitality investments — each property chosen for its
           irreplaceable location, exceptional design, and enduring returns.
         </p>
-        <div style={{ display: "flex", gap: isMobile ? 16 : 24, alignItems: "center", flexWrap: "wrap" }}>
+        <div 
+          style={{ 
+            display: "flex", 
+            gap: isMobile ? 16 : 24, 
+            alignItems: "center", 
+            flexWrap: "wrap" 
+          }}
+        >
           <button
             onClick={onExplore}
             style={{
@@ -95,7 +102,13 @@ const Hero = ({ onExplore }) => {
           {!isMobile && (
             <a
               href="#philosophy"
-              style={{ fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", textDecoration: "none" }}
+              style={{ 
+                fontSize: 10, 
+                letterSpacing: "0.3em", 
+                textTransform: "uppercase", 
+                color: "rgba(255,255,255,0.65)", 
+                textDecoration: "none" 
+              }}
             >
               Our Philosophy →
             </a>
@@ -105,14 +118,36 @@ const Hero = ({ onExplore }) => {
 
       {!isMobile && (
         <div
-          style={{ position: "absolute", bottom: 40, right: 60, zIndex: 2, display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}
+          style={{ 
+            position: "absolute", 
+            bottom: 40, 
+            right: 60, 
+            zIndex: 2, 
+            display: "flex", 
+            flexDirection: "column", 
+            alignItems: "center", 
+            gap: 10 
+          }}
           className="fadeUp-5"
         >
-          <span style={{ fontSize: 9, letterSpacing: "0.35em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", writingMode: "vertical-rl" }}>
+          <span 
+            style={{ 
+              fontSize: 9, 
+              letterSpacing: "0.35em", 
+              textTransform: "uppercase", 
+              color: "rgba(255,255,255,0.35)", 
+              writingMode: "vertical-rl" 
+            }}
+          >
             Scroll
           </span>
           <div
-            style={{ width: 1, height: 48, background: "linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)", animation: "scrollLine 2s 2s ease infinite" }}
+            style={{ 
+              width: 1, 
+              height: 48, 
+              background: "linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)", 
+              animation: "scrollLine 2s 2s ease infinite" 
+            }}
           />
         </div>
       )}
