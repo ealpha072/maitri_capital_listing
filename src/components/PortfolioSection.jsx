@@ -138,11 +138,12 @@ export const Card = ({ listing, onClick, featured, cols = 3 }) => {
                   marginTop: 3
                 }}
               >
-                {listing.investment}
+                Price on Application
               </div>
             </div>
           )}
-          {(listing.irr || listing.targetIrr) && (
+          
+          {listing.rooms && (
             <div>
               <div
                 style={{
@@ -152,7 +153,7 @@ export const Card = ({ listing, onClick, featured, cols = 3 }) => {
                   color: "rgba(255,255,255,0.32)"
                 }}
               >
-                {listing.irr ? "IRR" : "Target IRR"}
+                Rooms/Keys
               </div>
               <div
                 style={{
@@ -161,7 +162,7 @@ export const Card = ({ listing, onClick, featured, cols = 3 }) => {
                   marginTop: 3
                 }}
               >
-                {listing.irr || listing.targetIrr}
+                {listing.rooms}
               </div>
             </div>
           )}

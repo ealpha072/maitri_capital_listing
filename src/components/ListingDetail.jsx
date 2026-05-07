@@ -11,10 +11,17 @@ const ListingDetail = ({ listing, onBack }) => {
   }, []);
 
   const metrics = [
-    listing.investment && { label: "Investment", val: listing.investment },
-    (listing.irr || listing.targetIrr) && { label: listing.irr ? "IRR" : "Target IRR", val: listing.irr || listing.targetIrr, gold: true },
+    listing.rental_yield && { label: "Rental Yield", val: listing.rental_yield },
+    listing.zone && { label: "Approved Zone", val: listing.zone },
+    listing.portfolio && { label: "Number of hotels", val: listing.portfolio },
+    listing.mgt_exp && { label: "YRS Management", val: listing.mgt_exp }, 
+    listing.revenue && { label: listing.revenue_year, val: listing.revenue },
+    listing.occupancy && { label: "~Projected Occupancy", val: listing.occupancy },
+    listing.solar_power && { label: "Solar Powered", val: listing.solar_power },
+    listing.rating && { label: listing.rating_source, val: listing.rating },
     listing.rooms && { label: "Rooms / Keys", val: listing.rooms },
-    listing.opening && { label: listing.status === "Development" ? "Opening" : "Opened", val: listing.opening },
+    listing.floors && { label: "Floors Available", val: listing.floors },
+    listing.legacy && { label: listing.status === "Development" ? "Year Opening" : "Legacy (Years)", val: listing.legacy },
   ].filter(Boolean);
 
   return (

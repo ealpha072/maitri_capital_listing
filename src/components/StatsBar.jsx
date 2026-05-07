@@ -3,14 +3,10 @@ import { useResponsive } from "../hooks/useResponsive";
 
 const StatsBar = ({ listings }) => {
   const { isMobile } = useResponsive();
-  const totalInvest = listings.reduce(
-    (a, l) => a + parseFloat(l.investment?.replace(/[$M]/g, "") || 0),
-    0
-  );
   const stats = [
-    { num: `$${totalInvest.toFixed(0)}M+`, label: "Total Investments" },
-    { num: listings.length, label: "Opportunities in Africa" },
-    { num: "5+", label: "Property Types" },
+    { num: `$50M+`, label: "Assets Under Advisory" },
+    { num: listings.length, label: "Active Opportunities" },
+    { num: "3+", label: "Property Types" },
     { num: "2", label: "Countries" },
   ];
 
