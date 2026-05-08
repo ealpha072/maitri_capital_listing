@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useListingsContext } from "../context/ListingsContext";
 import { toSlug } from "../utils/theme";
 import { T } from "../utils/theme";
 import Nav from "../components/Nav";
@@ -11,7 +12,8 @@ import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import ListingDetail from "../components/ListingDetail";
 
-export const PublicSite = ({ listings }) => {
+export const PublicSite = () => {
+  const { listings } = useListingsContext();
   const navigate = useNavigate();
   const portfolioRef = useRef(null);
 
@@ -39,18 +41,46 @@ export const PublicSite = ({ listings }) => {
   );
 };
 
-export const ListingDetailPage = ({ listings }) => {
+export const ListingDetailPage = () => {
+  const { listings } = useListingsContext();
   const { slug } = useParams();
   const navigate = useNavigate();
   const listing = listings.find((l) => toSlug(l.title) === slug);
 
   if (!listing) {
     return (
-      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: T.cream, gap: 20 }}>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 40, color: T.ink }}>Property not found</div>
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          background: T.cream,
+          gap: 20
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 40,
+            color: T.ink
+          }}
+        >
+          Property not found
+        </div>
         <button
           onClick={() => navigate("/")}
-          style={{ background: T.gold, color: "white", border: "none", padding: "12px 32px", fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", cursor: "pointer" }}
+          style={{
+            background: T.gold,
+            color: "white",
+            border: "none",
+            padding: "12px 32px",
+            fontSize: 10,
+            letterSpacing: "0.3em",
+            textTransform: "uppercase",
+            cursor: "pointer"
+          }}
         >
           Back to Portfolio
         </button>
@@ -60,7 +90,11 @@ export const ListingDetailPage = ({ listings }) => {
 
   return (
     <>
-      <Nav onAdmin={() => navigate("/admin")} onHome={() => navigate("/")} adminMode={false} />
+      <Nav
+        onAdmin={() => navigate("/admin")}
+        onHome={() => navigate("/")}
+        adminMode={false}
+      />
       <ListingDetail
         listing={listing}
         onBack={() => {

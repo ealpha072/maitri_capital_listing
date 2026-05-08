@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { ListingsContext } from "./context/ListingsContext";
 import GlobalStyles from "./components/GlobalStyles";
 import { PublicSite, ListingDetailPage } from "./pages/PublicSite";
 import AdminGate from "./admin/AdminGate";
@@ -10,8 +11,23 @@ export default function App() {
 
   if (!loaded) {
     return (
-      <div style={{ minHeight: "100vh", background: T.slateDark, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, color: T.gold, letterSpacing: "0.2em" }}>
+      <div 
+        style={{ 
+          minHeight: "100vh", 
+          background: T.slateDark, 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center" 
+        }
+      }>
+        <div 
+          style={{ 
+            fontFamily: "'Cormorant Garamond', serif", 
+            fontSize: 22, 
+            color: T.gold, 
+            letterSpacing: "0.2em"
+          }}
+        >
           Maitri Capital
         </div>
       </div>
@@ -21,11 +37,13 @@ export default function App() {
   return (
     <>
       <GlobalStyles />
-      <Routes>
-        <Route path="/maitri_capital_listing" element={<PublicSite listings={listings} />} />
-        <Route path="/maitri_capital_listing/:slug" element={<ListingDetailPage listings={listings} />} />
-        <Route path="/admin" element={<AdminGate listings={listings} onSave={save} />} />
-      </Routes>
+      <ListingsContext.Provider value={{listings, save}}>
+        <Routes>
+          <Route path="/maitri_capital_listing" element={<PublicSite />} />
+          <Route path="/maitri_capital_listing/:slug" element={<ListingDetailPage />} />
+          <Route path="/admin" element={<AdminGate />} />
+        </Routes>
+      </ListingsContext.Provider>
     </>
   );
 }

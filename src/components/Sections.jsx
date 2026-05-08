@@ -222,7 +222,7 @@ export const ProcessSection = () => {
     ["01", "Discovery", "We source off-market opportunities through our global network — often years before a formal process begins."],
     ["02", "Due Diligence", "A rigorous 90-day process: site, operator, market, legal, and financial analysis by our in-house team."],
     ["03", "Structuring", "We design investment structures aligning incentives across developers, operators, and investors."],
-    ["04", "Asset Management", "Active stewardship throughout the lifecycle — development through exit. Typically 7–12 year hold."],
+    ["04", "Transaction Execution", "We coordinate the final stages of the investment process — supporting negotiations, documentation, investor coordination, and closing to ensure seamless transaction completion.."],
   ];
 
   return (

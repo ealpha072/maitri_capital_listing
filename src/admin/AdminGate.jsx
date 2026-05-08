@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useListingsContext } from "../context/ListingsContext";
 import { useNavigate } from "react-router-dom";
 import AdminLogin from "./AdminLogin";
 import AdminDashboard from "./AdminDashboard";
 
 // ─── ADMIN GATE ───────────────────────────────────────────────────────────────
-const AdminGate = ({ listings, onSave }) => {
+const AdminGate = () => {
+  const { listings, save:onSave } = useListingsContext();
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
 
