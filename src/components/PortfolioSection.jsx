@@ -220,7 +220,20 @@ const PortfolioSection = ({ listings, onSelect }) => {
   const { isMobile, isTablet } = useResponsive();
   const [filter, setFilter] = useState("All");
   const cats = ["All", ...Array.from(new Set(listings.map((l) => l.category)))];
-  const filtered = filter === "All" ? listings : listings.filter((l) => l.category === filter);
+  //const filtered = filter === "All" ? listings : listings.filter((l) => l.category === filter);
+  const [search, setSearch] = useState("")
+  const filtered = listings
+  .filter((l) => filter === "All" || l.category === filter)
+  .filter((l) => {
+    const q = search.toLowerCase();
+    return(
+      l.title?.toLowerCase().includes(q) ||
+      l.location?.toLowerCase().includes(q) ||
+      l.category?.toLowerCase().includes(q) ||
+      l.description?.toLowerCase().includes(q)
+    )
+  })
+
   const featured = filtered.find((l) => l.featured) || filtered[0];
   const rest = filtered.filter((l) => l.id !== featured?.id);
   const cols = isMobile ? 1 : isTablet ? 2 : 3;
@@ -257,33 +270,165 @@ const PortfolioSection = ({ listings, onSelect }) => {
             Active <em style={{ fontStyle: "italic", color: T.slate }}>Opportunities</em>
           </h2>
         </div>
+      </div>
+
+      {/* SEARCH INPUT*/}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: 12,
+          width: isMobile ? "100%" : "",
+          marginBottom: 12
+        }}
+      >
         <div
           style={{
-            display: "flex",
-            gap: 6,
-            flexWrap: "wrap"
+            position: "relative",
+            width: isMobile ? "100%" : ""
           }}
         >
-          {cats.map((c) => (
-            <button
-              key={c}
-              onClick={() => setFilter(c)}
-              style={{
-                fontSize: 9,
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                border: `1px solid ${filter === c ? T.slateDark : T.border}`,
-                padding: isMobile ? "7px 12px" : "9px 18px", cursor: "pointer",
-                background: filter === c ? T.slateDark : "transparent",
-                color: filter === c ? "white" : T.slate, transition: "all 0.3s",
-              }}
-            >
-              {c}
-            </button>
-          ))}
+          <input
+            type="text"
+            placeholder="Search by name, location..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{
+              width: isMobile ? "100%" : 260,
+              background: "transparent",
+              border: `1px solid ${T.border}`,
+              color: T.ink,
+              padding: "9px 36px 9px 14px",
+              fontSize: 12,
+              outline: "none",
+              fontFamily: "Jost, sans-serif",
+              letterSpacing: "0.03em"
+            }}
+            onFocus={(e) => e.target.style.borderColor = T.gold}
+            onBlur={(e) => e.target.style.borderColor = T.border}
+            name="search_term"
+          />
+
+          {/* SEARCH ICON */}
+          {
+            !search && (
+              <span
+                style={{
+                  position: "absolute",
+                  right: 12,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  color: T.slateLight,
+                  fontSize: 13,
+                  pointerEvents: "none"
+                }}
+              >
+                ⌕
+              </span>
+            )
+          }
+
+          {/* CLEAR BUTTON */}
+          {
+            search && (
+              <button
+                onClick={() => setSearch("")}
+                style={{
+                  position: "absolute",
+                  right: 10,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  color: T.slateLight,
+                  cursor: "pointer",
+                  fontSize: 16,
+                  lineHeight: 1,
+                  padding: 0
+                }}
+              >
+                x
+              </button>
+            )
+          }
         </div>
       </div>
-      {featured && (
+
+      {/* CATEGORY TAGS*/}
+      <div
+        style={{
+          display: "flex",
+          gap: 6,
+          flexWrap: "wrap",
+          marginBottom: 12
+        }}
+      >
+        {cats.map((c) => (
+          <button
+            key={c}
+            onClick={() => setFilter(c)}
+            style={{
+              fontSize: 9,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              border: `1px solid ${filter === c ? T.slateDark : T.border}`,
+              padding: isMobile ? "7px 12px" : "9px 18px", cursor: "pointer",
+              background: filter === c ? T.slateDark : "transparent",
+              color: filter === c ? "white" : T.slate, transition: "all 0.3s",
+            }}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      {/* UNCOMMENT TO ENABLE FILTERING */}    
+      {
+        filtered.length === 0 && (
+          <div
+            style={{
+              textAlign: "center",
+              padding: "80px 20px",
+              border: `1px solid ${T.border}`
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: 32,
+                fontWeight: 300,
+                color: T.slate,
+                marginBottom: 12
+              }}
+            >
+              No properties found
+            </div>
+            <p style={{ fontSize: 13, color: T.slateLight, marginBottom: 24 }}>
+              Try a different search term or category
+            </p>
+            <button
+              onClick={() => { setSearch(""); setFilter("All"); }}
+              style={{
+                background: "none",
+                border: `1px solid ${T.gold}`,
+                color: T.gold,
+                padding: "10px 28px",
+                fontSize: 10,
+                letterSpacing: "0.3em",
+                textTransform: "uppercase",
+                cursor: "pointer"
+              }}
+            >
+              Clear Filters
+            </button>
+          </div>
+        )
+      }
+
+      {filtered.length > 0 && featured && (
         <div
           style={{
             display: "grid",

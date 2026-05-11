@@ -94,6 +94,8 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
                 {l}
               </a>
             ))}
+            {/* 
+            // UNCOMMENT TO ENABLE ADMIN PANEL
             <button
               onClick={onAdmin}
               style={{ 
@@ -112,6 +114,7 @@ const Nav = ({ onAdmin, onHome, adminMode }) => {
             >
               {adminMode ? "← Public View" : "Admin"}
             </button>
+            */}
           </div>
         )}
 

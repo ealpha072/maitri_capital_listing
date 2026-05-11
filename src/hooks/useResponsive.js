@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 
 /*
-Delay calculation by 120ms. Instead of React re-rendering every component that uses useResponsive on every single pixel of window resize, it waits until the user has stopped resizing for 120ms before doing anything.
+Delay calculation by 120ms. 
+Instead of React re-rendering every component that uses useResponsive on every single pixel of window resize, 
+it waits until the user has stopped resizing for 120ms before doing anything.
 */
 
 const BREAKPOINTS = { mobile: 640, tablet: 1024 };
